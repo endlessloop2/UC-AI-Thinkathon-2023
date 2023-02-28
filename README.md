@@ -12,5 +12,7 @@ Then you can run the `run_prompt_array.py` script which will go through the cond
 
 
 To run the R files and create plots, the following modules need to be installed in your system: (tidyverse, lme4, sjPlot, conflicted).
+
 The `classify_responses.R` script classifies the responses according as "affirmation", "noncommital" and "negation". This only works for known responses.
+
 The `analysis.R` file was used for our analysis, as well as the included Excel file.
