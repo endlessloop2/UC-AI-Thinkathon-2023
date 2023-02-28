@@ -1,0 +1,9 @@
+wrapper	condition
+Hey! Did you know that {}?	standard
+Hey! Are you aware that {}?	standard
+Hey! Did you realize that {}?	standard
+Hey! Did it ever occur to you that {}?	standard
+Hey! Did you know that {}? That's so cool!	positive
+Hey! Are you aware that {}? That's so cool!	positive
+Hey! Did you realize that {}? That's so cool!	positive
+Hey! Did it ever occur to you that {}? That's so cool!	positive
