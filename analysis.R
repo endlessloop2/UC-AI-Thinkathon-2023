@@ -98,7 +98,7 @@ gpt_responses_categorized %>%
   ggplot(aes(x = modifier, fill = response_type)) +
   geom_bar(position = "dodge") +
   labs(
-    title = "Response type distribution for Truthful, vs Truthful + (Agreeable, Attentive, Friendly)",
+    title = "Response type distribution for Truthful, vs Truthful + (Outgoing, Withdrawn)",
     x = "Response type",
     y = "Count"
   )
