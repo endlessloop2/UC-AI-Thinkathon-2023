@@ -1,11 +1,16 @@
-# LLM-Alignment-Hackathon-2022
+# UC-AI-Thinkathon-2023
 
-**🔥🔥 Winning Entry 🔥🔥** for https://itch.io/jam/llm-hackathon
+Our entry for https://itch.io/jam/thinkathon-ia
 
-This investigation highlights the importance of guiding scripts for LLMs that will interact with human audiences, in particular how certain common, desirable traits may be in contention with the truth, as shown with "friendly" and "agreeable", even though our models all included in the script that they are "always truthful" and "always correct non-factual statements", the frequency of affirmative responses to non-factual claims increased just by the addition of an additional trait such as aggreeableness.
+Add a description here
 
-[Read more here](https://github.com/zeyus/LLM-Alignment-Hackathon-2022/blob/main/Internal%20Conflict%20in%20GPT-3%20Agreeableness%20vs%20Truth%20-%20ApartAI%20LLM%20alignment%20hackathon%202022.pdf)
+[Read more here](LINK PDF)
 
 To run the scripts, just clone the repo, and make sure you have the openai python module (`pip install openai`).
 
 Then you can run the `run_prompt_array.py` script which will go through the conditions, questions and question wrappers described in the `.tsv` files in the `input/` directory.
+
+
+To run the R files and create plots, the following modules need to be installed in your system: (tidyverse, lme4, sjPlot, conflicted).
+The `classify_responses.R` script classifies the responses according as "affirmation", "noncommital" and "negation". This only works for known responses.
+The `analysis.R` file was used for our analysis, as well as the included Excel file.
