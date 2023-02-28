@@ -136,6 +136,25 @@ gpt_responses_categorized %>%
 # save plot as png
 ggsave("data/output/truthful_vs_truthful_outgoing_response_type_distribution.png")
 
+
+# plot to compare response types for "truthful" and "straightforward" modifiers
+
+gpt_responses_categorized %>%
+  #filter(interaction_type %in% c("single_shot")) %>%  
+  filter(modifier %in% c("truthful", "straightforward")) %>%
+  ggplot(aes(x = response_type, fill = modifier)) +
+  geom_bar(position = "dodge") +
+  labs(
+    title = "Truthful vs Truthful + Straightforward response type distribution",
+    x = "Modifier",
+    y = "Count"
+  )
+
+
+# save plot as png
+ggsave("data/output/truthful_vs_truthful_straightforward_response_type_distribution.png")
+
+
 # plot to compare response types for "truthful" and "attentive" modifiers
 
 gpt_responses_categorized %>%
