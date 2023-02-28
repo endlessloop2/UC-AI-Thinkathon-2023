@@ -2,7 +2,7 @@ library(tidyverse)
 library(lme4)
 library(sjPlot)
 
-gpt_responses_categorized_tsv <- "data/output/results_merged_old_new_last2_categorized.tsv"
+gpt_responses_categorized_tsv <- "data/output/results_merged_old_new_categorized.tsv"
 gpt_responses_categorized <- read_tsv(gpt_responses_categorized_tsv)
 
 # delete prompt and response text columns, as they are not needed for the analysis
@@ -36,18 +36,6 @@ gpt_responses_categorized %>%
     x = "Response type",
     y = "Count"
   )
-
-# plot response type distribution by modifier
-
-gpt_responses_categorized %>%
-  ggplot(aes(x = response_type, fill = modifier)) +
-  geom_bar() +
-  labs(
-    title = "Response type distribution by modifier",
-    x = "Response type",
-    y = "Count"
-  )
-
 
 # plot response type distribution by modifier
 
@@ -114,7 +102,7 @@ gpt_responses_categorized %>%
     x = "Response type",
     y = "Count"
   )
-ggsave("data/output/by_modifier_relevant2.png", width = 8)
+ggsave("data/output/by_modifier_relevant3.png", width = 8)
 
 
 
@@ -146,7 +134,7 @@ gpt_responses_categorized %>%
 
 
 # save plot as png
-ggsave("data/output/aaagaaa.png")
+ggsave("data/output/truthful_vs_truthful_outgoing_response_type_distribution.png")
 
 # plot to compare response types for "truthful" and "attentive" modifiers
 
@@ -163,7 +151,7 @@ gpt_responses_categorized %>%
 
 
 # save plot as png
-ggsave("data/output/aaagaaa.png")
+ggsave("data/output/truthful_vs_truthful_attentive_response_type_distribution.png")
 
 # plot to compare response types for "truthful" and "warm" modifiers
 
@@ -180,7 +168,7 @@ gpt_responses_categorized %>%
 
 
 # save plot as png
-ggsave("data/output/aaagaaa.png")
+ggsave("data/output/truthful_vs_truthful_warm_response_type_distribution.png")
 
 
 
@@ -199,11 +187,7 @@ gpt_responses_categorized %>%
 
 
 # save plot as png
-ggsave("data/output/truthful_vs_truthful_agreeable_response_type_distribution.png")
-
-
-
-
+ggsave("data/output/truthful_vs_truthful_skeptical_response_type_distribution.png")
 
 
 # plot to compare response types for "truthful" and "creative" modifiers
@@ -220,7 +204,7 @@ gpt_responses_categorized %>%
   )
 
 # save plot as png
-ggsave("data/output/creative.png")
+ggsave("data/output/truthful_vs_truthful_creative_response_type_distribution.png")
 
 
 
@@ -342,11 +326,11 @@ gpt_responses_categorized %>%
   facet_wrap(~question_wrapper_type)
 
 # save plot as png
-ggsave("data/output/truthful_vs_agreeable_response_type_distribution_by_question_wrapper_type.png")
+ggsave("data/output/truthful_vs_truthful_agreeable_response_type_distribution_by_question_wrapper_type.png")
 
 
 
-# plot to compare truthful and agreeable modifiers by question_wrapper_type
+# plot to compare truthful and outgoing modifiers by question_wrapper_type
 gpt_responses_categorized %>%
   filter(modifier %in% c("truthful", "outgoing")) %>%
   ggplot(aes(x = response_type, fill = modifier)) +
@@ -359,4 +343,4 @@ gpt_responses_categorized %>%
   facet_wrap(~question_wrapper_type)
 
 # save plot as png
-ggsave("data/output/tsdsdsd.png")
+ggsave("data/output/truthful_vs_truthful_outgoing_response_type_distribution_by_question_wrapper_type.png")

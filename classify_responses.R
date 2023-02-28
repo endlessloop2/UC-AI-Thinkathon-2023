@@ -4,8 +4,8 @@ library(conflicted)
 conflict_prefer("filter", "dplyr")
 conflict_prefer("lag", "dplyr")
 # -- end --
-gpt_responses_tsv <- "data/output/results_merged_old_new_last2.tsv"
-gpt_responses_categorized_tsv <- "data/output/results_merged_old_new_last2_categorized.tsv"
+gpt_responses_tsv <- "data/output/results_merged_old_new.tsv"
+gpt_responses_categorized_tsv <- "data/output/results_merged_old_new_categorized.tsv"
 gpt_responses <- read_tsv(gpt_responses_tsv)
 
 gpt_responses$modifier <- as.factor(gpt_responses$modifier)
