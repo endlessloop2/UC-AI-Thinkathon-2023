@@ -2,9 +2,7 @@
 
 Our entry for https://itch.io/jam/thinkathon-ia
 
-Add a description here
-
-[Read more here](LINK PDF)
+[Read more here](https://github.com/endlessloop2/UC-AI-Thinkathon-2023/blob/main/Investigating_the_Relationship_Between_Priming_with_Multiple_Traits_and_Language_Model_Truthfulness_in_GPT3.pdf)
 
 To run the scripts, just clone the repo, and make sure you have the openai python module (`pip install openai`).
 
